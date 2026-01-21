@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>belajar flexbox</title>
+  <style>
+  .kontainerdiv{
+    display: flex;
+    background-color: lightblue;
+    gap: 10px;
+    width: 100%;
+    height: 100px;
+  }
+  .kontainerdiv div{
+    background-color: lightyellow;
+    font-size: 50px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .kontainerContoh1{
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+  }
+  .kontainerContoh1 div{
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightyellow;
+  }
+  .kontainerContoh2 {
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+  }
+  .kontainerContoh2 div{
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightyellow;
+  }
+  .kontainerContoh3 {
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .kontainerContoh3 div{
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightyellow;
+  }
+  .kontainerContoh4 {
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .kontainerContoh4 div{
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightyellow;
+  }
+  .kontainerContoh5{
+    width: 100%;
+    height:200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .kontainerContoh5 div{
+    background-color: lightyellow;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px
+  }
+  .kontainerContoh6{
+    width:100%;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .kontainerContoh6 div{
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightyellow;
+  }
+  .kontainerContoh7{
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+  .kontainerContoh7 div{
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightyellow;
+  }
+  .kontainerContoh8{
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .kontainerContoh8 div{
+    background-color: lightyellow;
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .kontainerContoh9{
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .kontainerContoh9 div{
+    background-color: tomato;
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .kontainerContoh10{
+    width: 100%;
+    height: 200px;
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .kontainerContoh10 div{
+    background-color: lightblue;
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .kontainerContoh11{
+    width: 100%;
+    height: 200px;
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .kontainerContoh11 div{
+    background-color: lightblue;
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .kontainerContoh12{
+    width: 100%;
+    height: 200px;
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .kontainerContoh12 div{
+    background-color: lightgreen;
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .kontainerContoh13{
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .kontainerContoh13 div{
+    background-color: pink;
+    font-size: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <h1>belajar flexbox</h1>
+  <p>flexbox adalah model tata letak 1 dimensi untuk mengatur model item secara horizontal atau vertikal didalam sebuah wadah(div)</p>
+  <p>komponen flexbox adalah kontainer flexsibel dimana properti display diberi nilai flex.</p>
+  contoh:
+  <div class="kontainerdiv">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+  <h1>properti kontainer css flex</h1>
+  <ol>
+    <li>display: harus diisi dengan flex atau inline-flex.</li>
+    <li>flex-direction: mengatur arah tampilan item flex.</li><br>
+    flex-direction juga mempunyai banyak nilai,antara lain:
+    <ul>
+      <li>row(default)- tugasny adalah menampilkan item flex secara horizontal dari kiri ke kanan.</li>
+      contoh:
+      <div class="kontainerContoh1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+      <li>column- tugasnya menampilkan item flex secara vertikal dari atas ke bawah.</li>
+      contoh:
+      <div class="kontainerContoh2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+      <li>row-reverse - tugasnya menampilan item flex secara horizontal tetapi arahnya dari kanan ke kiri.</li>
+      contoh:
+      <div class="kontainerContoh3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+      <li>column-reverse - tugasnya menampilkan item flex secara vertikal tetapi arahnya dari bawah ke atas.</li>
+      contoh:
+      <div class="kontainerContoh4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+    </ul><br>
+    
+    <li>flex-wrap: menentukan apakah item flex harus membungkus atau tidak.</li>
+    flex-wrap juga mempunyai banyak nilai antara lain:<br>
+    <ul>
+      <li>nowrap(default) - tugasnya menentukan bahwa item flex tidak akan membungkus.</li>
+      contoh:
+      <div class="kontainerContoh5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+      <li>wrap - tugasnya menentukan bahwa item flex akan membungkus ketika diperlukan.</li>
+      contoh:
+      <div class="kontainerContoh6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+      <li>wrap-reverse - tugasnya menentukan bahwa item flex akan membungkus ketika diperlukan,tetapi dalam keadaan terbalik.</li>
+      contoh:
+      <div class="kontainerContoh7">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+    </ul><br>
+    
+    <li>flex-flow: singkatan untuk flex-direction dan flex-wrap.</li><br>
+    
+    <li>justify-content: menyelaraskan item flex ketika item tersebut tidak menggunakan seluruh ruang yang tersedia pada sumbu utama(horizontal/garis lurus dari kiri ke kanan.)</li>
+    justify-content memiliki beberapa nilai diantaranya:<br>
+    <ul>
+      <li>center - tugasnya menyelaraskan item flex ditengah kontainer.</li>
+      contoh:
+      <div class="kontainerContoh8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+      <li>flex-start - tugasnya menyelaraskan item flex diawal kontainer.</li>
+      contoh:
+      <div class="kontainerContoh9">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+      <li>space-around - tugasnya menampilkan item flex dengan spasi disekitarnya.</li>
+      contoh:
+      <div class="kontainerContoh10">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+      <li>flex-end - tugasnya menyelaraskan item flex diakhir kontainer.</li>
+      contoh:
+      <div class="kontainerContoh11">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+      <li>space-between - tugasnya menampilkan item flex dengan spasi diantaranya.</li>
+      contoh:
+      <div class="kontainerContoh12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+      <li>space-evenly - tugasnya menampilkan item flex dengan jarak yang sama disekitarnya.</li>
+      contoh:
+       <div class="kontainerContoh13">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+    </ul>
+    <li>align-items: menyelaraskan item flex ketika item tersebut tidak menggunakan seluruh ruang yang tersedia pada sumbu silang(vertikal/atau dari atas kebawah).<br></li>
+    <ul>
+      <li>center - tugasnya menyelaraskan item flex ditengah kontainer.</li>
+      <li>flex-star - tugasnya menyelaraskan item flex di bagian atas kontainer.</li>
+      <li>flex-end - tugasnya menyelaraskan item flex dibagian bawah kontainer.</li>
+      <li>stretch - </li>
+      <li>baseline</li>
+      <li>normal</li>
+    </ul>
+    <li>align-content: </li>
+  </ol>
+</body>
+</html>
